@@ -733,3 +733,19 @@ footer{
     object-fit: cover;    /* keeps image properly fitted */
     border: 3px solid #fff; /* optional border */
 }
+.disaster-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.disaster-card {
+  width: 100%;
+  box-sizing: border-box;
+} body {
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
