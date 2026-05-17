@@ -1,4 +1,9 @@
 /* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
    GLOBAL
 ========================= */
 *{
@@ -7,17 +12,47 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family: 'Segoe UI', sans-serif;
-    background:#eef2f7;
+    font-family:'Poppins', sans-serif;
+    background:
+    linear-gradient(rgba(238,242,247,0.88), rgba(238,242,247,0.88)),
+    url('background.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
     color:#222;
+    overflow-x:hidden;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#dbe6f5;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#003b8f;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#0d47a1;
 }
 
 /* =========================
    HEADER
 ========================= */
 .main-header{
-    background: linear-gradient(90deg,#001f4d,#003b8f,#001f4d);
+    background:linear-gradient(90deg,#001f4d,#003b8f,#001f4d);
     color:white;
     padding:20px 40px;
     display:flex;
@@ -27,41 +62,54 @@ body{
     position:sticky;
     top:0;
     z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
 }
 
+/* =========================
+   LOGO
+========================= */
 .logo-container{
     width:95px;
     height:95px;
-    background:white;
-    border-radius:50%;
-    overflow:hidden;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-.logo-container img{
-    width:85%;
-    height:85%;
-    object-fit:contain;
+.logo-container img {
+    width: 10px;          /* smaller size so full logo fits */
+    height: 10px;
+    border-radius: 50%;
+    object-fit: contain;  /* shows full logo */
+    background: white;    /* optional clean background */
+    
 }
-
+/* =========================
+   HEADER TEXT
+========================= */
 .header-text{
     flex:1;
     text-align:center;
+    padding:0 20px;
 }
 
 .header-text h1{
-    font-size:48px;
-    letter-spacing:1px;
+    font-size:52px;
     font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.3);
 }
 
 .header-text p{
     margin-top:10px;
     font-size:18px;
     color:#dbe8ff;
+    font-weight:300;
 }
 
 /* =========================
@@ -76,13 +124,17 @@ body{
    SIDEBAR
 ========================= */
 .sidebar{
-    width:260px;
-    background:linear-gradient(180deg,#001633,#002b66);
+    width:270px;
+    background:rgba(0,22,51,0.92);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
     padding:25px 15px;
     color:white;
     position:sticky;
     top:0;
     height:100vh;
+    box-shadow:4px 0 15px rgba(0,0,0,0.1);
 }
 
 .sidebar ul{
@@ -100,10 +152,10 @@ body{
     padding:15px;
     color:white;
     text-decoration:none;
-    border-radius:12px;
+    border-radius:14px;
     transition:0.3s ease;
     font-weight:600;
-    font-size:18px;
+    font-size:17px;
     background:rgba(255,255,255,0.05);
     border:1px solid rgba(255,255,255,0.08);
 }
@@ -114,6 +166,9 @@ body{
     border-left:5px solid #d4a017;
 }
 
+/* =========================
+   SIDEBAR ICONS
+========================= */
 .sidebar ul li a img{
     width:42px;
     height:42px;
@@ -121,6 +176,11 @@ body{
     background:white;
     padding:6px;
     border-radius:10px;
+    transition:0.3s ease;
+}
+
+.sidebar ul li a:hover img{
+    transform:rotate(-5deg) scale(1.1);
 }
 
 /* =========================
@@ -135,10 +195,30 @@ main{
    CONTENT SECTION
 ========================= */
 .content-section{
-    background:white;
-    border-radius:20px;
+    background:rgba(255,255,255,0.94);
+    backdrop-filter:blur(6px);
+
+    border-radius:22px;
     overflow:hidden;
-    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+
+    animation:fadeUp 0.7s ease;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* =========================
@@ -148,6 +228,25 @@ main{
     width:100%;
     height:420px;
     object-fit:cover;
+    border-radius:18px;
+    transition:0.4s ease;
+}
+
+.banner:hover{
+    transform:scale(1.01);
+}
+
+/* =========================
+   EVACUATION IMAGE
+========================= */
+#evacuation-plan img{
+    width:100%;
+    max-width:1400px;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
 }
 
 /* =========================
@@ -157,20 +256,27 @@ main{
     padding:40px;
 }
 
+/* =========================
+   SECTION TITLES
+========================= */
 .content h2{
     text-align:center;
-    font-size:46px;
+    font-size:42px;
     color:#003b8f;
     margin-bottom:20px;
     font-weight:800;
+    letter-spacing:1px;
 }
 
+/* =========================
+   INTRO TEXT
+========================= */
 .intro{
     text-align:center;
     max-width:900px;
     margin:auto;
     font-size:18px;
-    line-height:1.8;
+    line-height:1.9;
     color:#555;
     margin-bottom:40px;
 }
@@ -188,19 +294,23 @@ main{
     display:flex;
     align-items:flex-start;
     gap:20px;
-    background:#f9fbff;
+    background:white;
     border-left:8px solid #003b8f;
-    border-radius:16px;
-    padding:25px;
-    transition:0.3s ease;
-    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+    border-radius:18px;
+    padding:28px;
+    transition:0.35s ease;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
 }
 
 .step:hover{
     transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    border-left:8px solid #d4a017;
 }
 
+/* =========================
+   STEP IMAGE
+========================= */
 .step img{
     width:85px;
     height:85px;
@@ -211,21 +321,25 @@ main{
     border:2px solid #dbe6f5;
 }
 
+/* =========================
+   STEP TEXT
+========================= */
 .step-text{
     flex:1;
 }
 
 .step-text h3{
     color:#003b8f;
-    font-size:28px;
-    margin-bottom:12px;
+    font-size:30px;
+    margin-bottom:10px;
     font-weight:700;
 }
 
 .step-text p{
-    color:#444;
-    line-height:1.8;
+    color:#555;
+    line-height:1.9;
     font-size:17px;
+    font-weight:400;
 }
 
 /* =========================
@@ -238,13 +352,15 @@ main{
     color:white;
     padding:12px 22px;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:10px;
     transition:0.3s;
     font-weight:600;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .excel-link:hover{
     background:#0d47a1;
+    transform:translateY(-2px);
 }
 
 /* =========================
@@ -258,15 +374,17 @@ main{
 }
 
 .route-buttons button{
-    background:#002b66;
+    background:linear-gradient(135deg,#003b8f,#005be0);
     color:white;
     border:none;
+    border:1px solid rgba(255,255,255,0.2);
     padding:14px 28px;
-    border-radius:10px;
+    border-radius:12px;
     cursor:pointer;
     font-size:16px;
-    font-weight:bold;
+    font-weight:700;
     transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .route-buttons button:hover{
@@ -279,10 +397,52 @@ main{
 ========================= */
 .route-box{
     background:white;
-    border-radius:18px;
+    border-radius:20px;
     overflow:hidden;
     margin-top:20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   ROUTE DESCRIPTION
+========================= */
+.route-description{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:18px;
+    padding:25px;
+    color:white;
+    margin-top:20px;
+}
+
+.route-description h3{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.route-description p{
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* =========================
+   TRANSPARENT TEXT BOX
+========================= */
+.transparent-box{
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    padding:25px;
+    margin-top:20px;
+
+    color:white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* =========================
@@ -303,7 +463,7 @@ footer{
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 ========================= */
 @media(max-width:992px){
 
@@ -327,8 +487,12 @@ footer{
         font-size:34px;
     }
 
+    .header-text p{
+        font-size:16px;
+    }
+
     .banner{
-        height:250px;
+        height:220px;
     }
 
     .content{
@@ -349,4 +513,223 @@ footer{
         width:70px;
         height:70px;
     }
+
+    .step-text h3{
+        font-size:24px;
+    }
+
+    .step-text p{
+        font-size:15px;
+    }
+
+    #evacuation-plan img{
+        border-radius:12px;
+    }
+
+    .route-buttons{
+        justify-content:center;
+    }
+
+    .route-buttons button{
+        width:100%;
+    }
+
+    .route-description{
+        text-align:center;
+    }
+    .map-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.map-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CLICKABLE POINTS */
+.map-point {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.point1 { top: 30%; left: 40%; }
+.point2 { top: 50%; left: 65%; }
+.point3 { top: 70%; left: 30%; }
+
+/* EVAC BOX */
+.evac-box {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: #ffffff;
+    border-left: 5px solid #004aad;
+    border-radius: 8px;
+}
+}
+.route-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.route-buttons button{
+    padding:12px 18px;
+    border:none;
+    background:#003b8f;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.route-buttons button:hover{
+    background:#0d47a1;
+    transform:scale(1.05);
+}
+.route-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f2f2f2;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.route-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.route-btn:hover {
+    background: #ddd;
+    transform: scale(1.03);
+}
+.news-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.news-card{
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.3s ease;
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+.news-card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 12px 28px rgba(0,0,0,0.25);
+}
+
+.card-image{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    display:block;
+    transition:0.3s ease;
+}
+
+.card-image:hover{
+    transform:scale(1.03);
+}
+/* FULLSCREEN MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    z-index:999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-image{
+    max-width:95%;
+    max-height:95%;
+    border-radius:12px;
+    animation:zoomIn .3s ease;
+}
+
+.close-btn{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:50px;
+    cursor:pointer;
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+.sidebar a.active{
+    background:#0d47a1;
+    border-left:5px solid #d4a017;
+}
+.route-display{
+    margin-top:25px;
+    padding:25px;
+    border-radius:16px;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    line-height:1.8;
+}
+/* =========================
+   ENLARGE ROUTE DISPLAY
+========================= */
+
+.route-display{
+    margin-top:25px;
+    padding:25px;
+    border-radius:16px;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    line-height:1.8;
+
+    transition:all 0.4s ease;
+    cursor:pointer;
+}
+
+/* ENLARGED STYLE */
+.route-display.active{
+    transform:scale(1.05);
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+    padding:40px;
+}
+
+.logo-container img {
+    width: 100px;          /* adjust size */
+    height: 100px;
+    border-radius: 50%;   /* makes it circular */
+    object-fit: cover;    /* keeps image properly fitted */
+    border: 3px solid #fff; /* optional border */
 }
