@@ -1,703 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safety Website</title>
+
+    <title>PNOCS Safety Monitoring</title>
+
     <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-    <header class="main-header">
 
-    <!-- Left Logo -->
-   
+<!-- =========================================
+HEADER
+========================================= -->
+
+<header class="main-header">
+
+    <!-- LEFT LOGO -->
     <div class="logo-container">
-    <img 
-        src="https://i.pinimg.com/originals/93/b9/23/93b9233a41a10d58ebcaa7ecf580f040.png"
-        alt="Safety Logo"
-    >
-</div>
 
-    <!-- Header Text -->
-    <div class="header-text">
-        <h1>PNOCS Safety Monitoring</h1>
-        <p>Promoting Safety, Preparedness, and Protection</p>
+        <img 
+            src="https://acpc.gov.ph/wp-content/uploads/BAGONG-PILIPINAS-LOGO-1-1-150x150.png"
+            alt="PNOCS Logo"
+        >
+
     </div>
 
-    <!-- Right Logo -->
+    <!-- HEADER TEXT -->
+    <div class="header-text">
+
+        <h1>PNOCS Safety Monitoring</h1>
+
+        <p>
+            Promoting Safety, Preparedness, and Protection
+        </p>
+
+    </div>
+
+    <!-- RIGHT LOGO -->
     <div class="logo-container">
+
         <img 
-            src="https://tse1.mm.bing.net/th/id/OIP.AV-E72rVbBdU0UCASw6O9QHaHX?rs=1&pid=ImgDetMain&o=7&rm=3" 
-            alt="Safety Icon"
+            src="https://tse1.mm.bing.net/th/id/OIP.AV-E72rVbBdU0UCASw6O9QHaHX?rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Safety Logo"
         >
+
     </div>
 
 </header>
-    
-    <div class="container">
-        <nav class="sidebar">
-            <ul>
 
-    <li>
-        <a href="#" onclick="showSection('safety-equipment')">
-            <img src="https://img.freepik.com/premium-psd/safety-equipment-isolated-transparent-background_918049-2570.jpg" alt="">
-            Safety Equipment
-        </a>
-    </li>
+<!-- =========================================
+MAIN CONTAINER
+========================================= -->
 
-    <li>
-        <a href="#" onclick="showSection('evacuation-plan')">
-            <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png" alt="">
-            Evacuation Plan
-        </a>
-    </li>
+<div class="container">
 
-    <li>
-        <a href="#" onclick="showSection('machineries')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png" alt="">
-            Machineries
-        </a>
-    </li>
+    <!-- =========================================
+    SIDEBAR
+    ========================================= -->
 
-    <li>
-        <a href="#" onclick="showSection('safety-route')">
-            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="">
-            Safety Route
-        </a>
-    </li>
+    <nav class="sidebar">
 
-    <li>
-        <a href="#" onclick="showSection('blank-section')">
-            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="">
-            Description Section
-        </a>
-    </li>
+        <ul>
 
-</ul>
-        </nav>
-        
-        <main>
-         <section id="safety-equipment" class="content-section">
+            <li>
 
-    <!-- Banner -->
-    <img 
-        class="banner"
-        src="https://saferight.com.au/wp-content/uploads/2024/02/Various-Industrial-safety-equipment-to-protect-personal-safety-scaled.jpeg"
-        alt="Safety Equipment"
-    >
+                <a href="#" onclick="showSection('safety-equipment')">
 
-    <div class="content">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2767/2767747.png">
 
-        <h2>Safety Equipment & Protection</h2>
+                    Safety Equipment
 
-        <p class="intro">
-            Safety equipment helps protect workers from hazards, accidents,
-            injuries, and emergencies in the workplace.
-        </p>
+                </a>
 
-        <div class="steps">
+            </li>
 
-            <!-- FIRE EXTINGUISHER -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/2913/2913465.png" alt="">
-                <a href="https://docs.google.com/spreadsheets/d/1LzupdjIfSrGdSD3Ti2CEF_oDZ_oE1JuH/edit?usp=sharing&ouid=116017026336162386481&rtpof=true&sd=true" target="_blank">
-    
-</a>
+            <li>
 
-                <div class="step-text">
+                <a href="#" onclick="showSection('evacuation-plan')">
 
-    <h3>1. Fire Extinguisher</h3>
+                    <img src="https://cdn-icons-png.flaticon.com/128/18325/18325164.png">
 
-    <p>
-        Used to control or extinguish small fires during emergencies.
-        Always know the nearest fire extinguisher location.
-    </p>
+                    Evacuation Plan
 
-    <a href="https://docs.google.com/spreadsheets/d/1LzupdjIfSrGdSD3Ti2CEF_oDZ_oE1JuH/edit?usp=sharing&ouid=116017026336162386481&rtpof=true&sd=true" target="_blank" class="excel-link">
-        📊 View Excel Data
-    </a>
+                </a>
 
-</div>
-            </div>
+            </li>
 
-            <!-- EMERGENCY LIGHT -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/595/595067.png" alt="Emergency Light">
+            <li>
 
-                <div class="step-text">
-                    <h3>2. Emergency Light</h3>
-                    <p>
-                        Provides illumination during power outages to help
-                        people evacuate safely.
+                <a href="#" onclick="showSection('machineries')">
+
+                    <img src="https://cdn-icons-png.flaticon.com/128/3362/3362661.png">
+
+                    Appliances
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#" onclick="showSection('safety-route')">
+
+                    <img src="https://cdn-icons-png.flaticon.com/128/18591/18591580.png">
+
+                    Emergency Preparedness 
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#" onclick="showSection('blank-section')">
+
+                    <img src="https://cdn-icons-png.flaticon.com/128/7739/7739187.png">
+
+                    Safety Announcements
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- =========================================
+    MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+        <!-- =========================================
+        SAFETY EQUIPMENT
+        ========================================= -->
+
+        <section id="safety-equipment" class="content-section">
+
+            <img 
+                class="banner"
+                src="https://saferight.com.au/wp-content/uploads/2024/02/Various-Industrial-safety-equipment-to-protect-personal-safety-scaled.jpeg"
+                alt="Safety Equipment Banner"
+            >
+
+            <div class="content">
+
+                <h2>Safety Equipment & Protection</h2>
+
+                <div class="transparent-box">
+
+                    <p class="intro">
+                        Safety equipment helps protect workers from hazards,
+                        injuries, accidents, and emergencies in the workplace.
                     </p>
+
                 </div>
+
+                <div class="steps">
+
+                    <!-- FIRE EXTINGUISHER -->
+                    <div class="step">
+
+                        <img src="https://cdn-icons-png.flaticon.com/128/12995/12995716.png">
+
+                        <div class="step-text">
+
+                            <h3>1. Fire Extinguisher</h3>
+
+                            <p>
+                                Used to control or extinguish small fires
+                                during emergencies.
+                            </p>
+
+                            <a 
+                                href="https://docs.google.com/spreadsheets/d/1LzupdjIfSrGdSD3Ti2CEF_oDZ_oE1JuH/edit?usp=sharing"
+                                target="_blank"
+                                class="excel-link"
+                            >
+                                📊 View Excel Data
+                            </a>
+
+                            <a 
+                                href="https://drive.google.com/file/d/1kvkVIBTt0gIdzLsZxuA5a_Rr3f0tvnyE/view"
+                                target="_blank"
+                                class="excel-link"
+                            >
+                                🧯 Fire Extinguisher Location
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- EMERGENCY LIGHT -->
+                    <div class="step">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7UNQVbnXCQjnBfcISxxMAUIkrZy-Uea_c5w&s" alt="Emergency Light">
+
+                        <div class="step-text">
+
+                            <h3>2. Emergency Light</h3>
+
+                            <p>
+                                Provides illumination during power outages to help
+                                workers evacuate safely during emergencies.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- FIRST AID KIT -->
+                    <div class="step">
+
+                        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt="First Aid Kit">
+
+                        <div class="step-text">
+
+                            <h3>3. First Aid Kit</h3>
+
+                            <p>
+                                Contains medical supplies used for treating injuries,
+                                cuts, burns, and emergency situations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- SAFETY HELMET -->
+                    <div class="step">
+
+                        <img src="https://png.pngtree.com/png-vector/20250416/ourmid/pngtree-bright-yellow-construction-safety-helmet-for-industrial-use-png-image_16017625.png" alt="Safety Helmet">
+
+                        <div class="step-text">
+
+                            <h3>4. Safety Helmet</h3>
+
+                            <p>
+                                Protects the head from impacts, falling objects,
+                                and dangerous workplace hazards.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <!-- FIRST AID KIT -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt="First Aid Kit">
+        </section>
 
-                <div class="step-text">
-                    <h3>3. First Aid Kit</h3>
-                    <p>
-                        Contains medical supplies for treating minor injuries
-                        and providing emergency care.
-                    </p>
-                </div>
-            </div>
+        <!-- =========================================
+        EVACUATION PLAN
+        ========================================= -->
 
-            <!-- HARD HAT -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png" alt="Safety Helmet">
+        <section id="evacuation-plan" class="content-section" style="display:none;">
 
-                <div class="step-text">
-                    <h3>4. Safety Helmet</h3>
-                    <p>
-                        Protects the head from falling objects, impacts,
-                        and workplace hazards.
-                    </p>
-                </div>
-            </div>
+<img 
+    class="banner"
+    src="https://i.ibb.co/YT0VnBw2/669408824-2277084272824012-8232874121301597550-n-1.png/your-image.jpg"
+    alt="Evacuation Plan"
+/>
 
-            <!-- SAFETY GLOVES -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/2784/2784593.png" alt="Safety Gloves">
+            <div class="content">
 
-                <div class="step-text">
-                    <h3>5. Safety Gloves</h3>
-                    <p>
-                        Helps protect hands from chemicals, cuts, burns,
-                        and electrical hazards.
-                    </p>
-                </div>
-            </div>
-
-            <!-- SAFETY GOGGLES -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/3209/3209265.png" alt="Safety Goggles">
-
-                <div class="step-text">
-                    <h3>6. Safety Goggles</h3>
-                    <p>
-                        Protects the eyes from dust, chemicals, sparks,
-                        and flying debris.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</section>
-</section>
-            
-            <section id="evacuation-plan" class="content-section" style="display: none;">
                 <h2>Evacuation Plan</h2>
-                <img src="https://via.placeholder.com/400x200.png?text=Evacuation+Plan" alt="Evacuation Plan">
-                <p>Details of the evacuation plan will be listed here...</p>
-            </section>
-            
-            <section id="machineries" class="content-section" style="display: none;">
-                <h2>Machineries</h2>
-                <img src="https://via.placeholder.com/400x200.png?text=Machineries" alt="Machineries">
-                <p>Information regarding the various machineries...</p>
-            </section>
-            
-           <section id="safety-route" class="content-section" style="display: none;">
 
-    <h2>Safety Route</h2>
+                <div class="transparent-box">
 
-    <div class="route-buttons">
+                    <p class="intro">
+                        Follow the designated evacuation routes during emergencies
+                        to ensure safety and orderly movement.
+                    </p>
 
-        <button onclick="showRoute('route1')">5S</button>
-        <button onclick="showRoute('route2')">DENGUE</button>
-        <button onclick="showRoute('route3')">EARTHQUAKE</button>
-        <button onclick="showRoute('route4')">ELECTRICAL</button>
-         <button onclick="showRoute('route5')">TSUNAMI</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+        APPLIANCES
+        ========================================= -->
+
+        <section id="machineries" class="content-section" style="display:none;">
+
+            <img 
+                class="banner"
+                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop"
+                alt="Appliances"
+            >
+
+            <div class="content">
+
+                <h2>Appliances & Maintenance</h2>
+
+                <div class="transparent-box">
+
+                    <p class="intro">
+                        Proper appliance maintenance helps ensure workplace safety,
+                        improves equipment efficiency, and prevents electrical hazards.
+                    </p>
+
+                </div>
+
+                <div class="steps">
+
+                    <!-- AIR CONDITIONER -->
+                    <div class="step">
+
+                        <img src="https://cdn-icons-png.flaticon.com/512/1530/1530481.png" alt="Air Conditioner">
+
+                        <div class="step-text">
+
+                            <h3>1. Air Conditioner</h3>
+
+                            <p>
+                                Air conditioning systems help maintain comfortable
+                                room temperatures and proper ventilation inside offices
+                                and facilities.
+                            </p>
+
+                            <p>
+                                <strong>Maintenance:</strong>
+                                Clean filters regularly, inspect electrical connections,
+                                and schedule periodic servicing to maintain efficiency.
+                            </p>
+
+                        </div>
+
+                    </div>
 
 
-    </div>
 
-    <!-- 5S -->
-    <div id="route1" class="route-box">
+                </div>
 
-    <!-- Main Banner Image -->
-    <img 
-        class="banner"
-        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop" 
-        alt="Organized Workplace"
-    >
+            </div>
+
+        </section>
+
+        <!-- =========================================
+        SAFETY ROUTE
+        ========================================= -->
+
+       <!-- =========================================
+SAFETY ROUTE
+========================================= -->
+
+<section id="safety-route" class="content-section" style="display:none;">
 
     <div class="content">
-        <h2>5S Workplace Organization Methodology</h2>
 
-        <p class="intro">
-            The <strong>5S Methodology</strong> is a workplace organization system designed 
-            to improve efficiency, safety, cleanliness, and productivity.
-        </p>
+        <h2>Emergency Preparedness</h2>
 
-        <div class="steps">
+        <div class="route-buttons">
 
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Sort Icon">
-                
-                <div class="step-text">
-                    <h3>1. Sort (Seiri)</h3>
-                    <p>
-                        Remove unnecessary items from the workspace so only essential 
-                        tools and materials remain.
-                    </p>
-                </div>
-            </div>
+            <!-- Natural Disasters -->
+            <button class="route-btn" onclick="showRoute('earthquake')">
+                <img src="https://cdn-icons-png.flaticon.com/128/3242/3242697.png" alt="">
+                Earthquake
+            </button>
 
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="Set in Order Icon">
+            <button class="route-btn" onclick="showRoute('volcano')">
+                <img src="https://cdn-icons-png.flaticon.com/128/472/472743.png" alt="">
+                Volcano
+            </button>
 
-                <div class="step-text">
-                    <h3>2. Set in Order (Seiton)</h3>
-                    <p>
-                        Arrange necessary items properly for easy access and efficient workflow.
-                    </p>
-                </div>
-            </div>
+            <button class="route-btn" onclick="showRoute('landslide')">
+                <img src="https://cdn-icons-png.flaticon.com/128/5907/5907032.png" alt="">
+                Landslide
+            </button>
 
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/995/995053.png" alt="Shine Icon">
+            <button class="route-btn" onclick="showRoute('stormsurge')">
+                <img src="https://cdn-icons-png.flaticon.com/128/9755/9755320.png" alt="">
+                Storm Surge
+            </button>
 
-                <div class="step-text">
-                    <h3>3. Shine (Seisō)</h3>
-                    <p>
-                        Clean the workspace regularly to maintain safety and detect hazards.
-                    </p>
-                </div>
-            </div>
+            <button class="route-btn" onclick="showRoute('tsunami')">
+                <img src="https://cdn-icons-png.flaticon.com/128/1146/1146834.png" alt="">
+                Tsunami
+            </button>
 
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Standardize Icon">
+            <!-- Health & Environmental Safety -->
+            <button class="route-btn" onclick="showRoute('dengue')">
+                <img src="https://cdn-icons-png.flaticon.com/128/16779/16779709.png" alt="">
+                Dengue
+            </button>
 
-                <div class="step-text">
-                    <h3>4. Standardize (Seiketsu)</h3>
-                    <p>
-                        Create consistent procedures and schedules to maintain organization.
-                    </p>
-                </div>
-            </div>
+            <button class="route-btn" onclick="showRoute('heat')">
+                <img src="https://cdn-icons-png.flaticon.com/128/7110/7110207.png" alt="">
+                Severe Heat
+            </button>
 
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Sustain Icon">
+            <button class="route-btn" onclick="showRoute('5s')">
+                <img src="https://cdn-icons-png.flaticon.com/128/9584/9584507.png" alt="">
+                5S
+            </button>
 
-                <div class="step-text">
-                    <h3>5. Sustain (Shitsuke)</h3>
-                    <p>
-                        Build discipline and continuous improvement habits among employees.
-                    </p>
-                </div>
-            </div>
+            <!-- Electrical & Transportation Safety -->
+            <button class="route-btn" onclick="showRoute('electrical')">
+                <img src="https://cdn-icons-png.flaticon.com/128/616/616494.png" alt="">
+                Electrical
+            </button>
+
+            <button class="route-btn" onclick="showRoute('motorcycle')">
+                <img src="https://cdn-icons-png.flaticon.com/128/11432/11432322.png" alt="">
+                Motorcycle
+            </button>
+
+            <!-- Religious & Cultural Events -->
+            <button class="route-btn" onclick="showRoute('eid')">
+                <img src="https://cdn-icons-png.flaticon.com/128/4358/4358837.png" alt="">
+                Eid Al Adha
+            </button>
+
+            <button class="route-btn" onclick="showRoute('soul')">
+                <img src="https://cdn-icons-png.flaticon.com/128/3956/3956818.png" alt="">
+                All Souls' Day
+            </button>
 
         </div>
+
+        <!-- OUTPUT AREA -->
+        <div id="route-display" class="route-display">
+            <h3>Select a topic</h3>
+            <p>Click a button to view safety information.</p>
+        </div>
+
     </div>
+
+</section>
+
+    <!-- =========================================
+DESCRIPTION SECTION
+========================================= -->
+
+<section id="blank-section" class="content-section" style="display:none;">
+
+    <div class="content">
+
+        <h2>Safety Announcements & Updates</h2>
+
+       <div class="news-container">
+
+    <!-- CARD 1 -->
+    <div class="news-card">
+        <img 
+            src="https://i.ibb.co/XkJ54Y1X/901a052bab0b41ee9ca8807ec9c046e7.jpg"
+            alt="Safety News"
+            class="card-image"
+            onclick="openModal(this.src)"
+        >
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="news-card">
+        <img 
+            src="https://i.ibb.co/svmjqg1N/6559846258474f728458974791015923.jpg"
+            alt="Safety News"
+            class="card-image"
+            onclick="openModal(this.src)"
+        >
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="news-card">
+        <img 
+            src="https://i.ibb.co/YFFMGcQ9/3.jpg"
+            alt="Safety News"
+            class="card-image"
+            onclick="openModal(this.src)"
+        >
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="news-card">
+        <img 
+            src="https://i.ibb.co/Kj6R7yQC/2ef687793fbd4140920e0acb9683d75f.jpg"
+            alt="Safety News"
+            class="card-image"
+            onclick="openModal(this.src)"
+        >
+    </div>
+
 </div>
 
-   
-   <!-- DENGUE -->
-<div id="route2" class="route-box" style="display:none;">
+<!-- FULLSCREEN IMAGE MODAL -->
+<div id="imageModal" class="modal">
 
-    <!-- Banner -->
-    <img 
-        class="banner"
-        src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=1200&auto=format&fit=crop"
-        alt="Dengue Prevention"
-    >
+    <span class="close-btn" onclick="closeModal()">
+        &times;
+    </span>
 
-    <div class="content">
+    <img id="modalImg" class="modal-image">
 
-        <h2>Dengue Prevention & Awareness</h2>
-
-        <p class="intro">
-            Dengue is a mosquito-borne disease that can be prevented through 
-            proper sanitation, cleanliness, and awareness.
-        </p>
-
-        <div class="steps">
-
-            <!-- STEP 1 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/619/619032.png" alt="Mosquito">
-
-                <div class="step-text">
-                    <h3>1. Eliminate Standing Water</h3>
-                    <p>
-                        Remove stagnant water from containers, tires, flower pots,
-                        and canals where mosquitoes can breed.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 2 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966480.png" alt="Cleaning">
-
-                <div class="step-text">
-                    <h3>2. Maintain Clean Surroundings</h3>
-                    <p>
-                        Keep workplaces and communities clean to reduce mosquito
-                        breeding areas.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 3 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/2785/2785819.png" alt="Protection">
-
-                <div class="step-text">
-                    <h3>3. Use Protection</h3>
-                    <p>
-                        Wear long sleeves and use mosquito repellents or nets
-                        to avoid mosquito bites.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 4 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png" alt="Health">
-
-                <div class="step-text">
-                    <h3>4. Watch for Symptoms</h3>
-                    <p>
-                        Common symptoms include fever, headache, body pain,
-                        nausea, and skin rashes.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 5 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/2967/2967350.png" alt="Doctor">
-
-                <div class="step-text">
-                    <h3>5. Seek Medical Attention</h3>
-                    <p>
-                        Consult a doctor immediately if dengue symptoms appear
-                        to avoid severe complications.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-    <!-- EARTHQUAKE -->
-  <!-- EARTHQUAKE -->
-<div id="route3" class="route-box" style="display:none;">
-
-    <!-- Banner -->
-    <img 
-        class="banner"
-        src="https://tse2.mm.bing.net/th/id/OIP.n4_xG0DYbdrdO5jMq7evdQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3"
-        alt="Earthquake Safety"
-    >
-
-    <div class="content">
-
-        <h2>Earthquake Safety & Preparedness</h2>
-
-        <p class="intro">
-            Earthquakes can happen unexpectedly. Proper preparation and quick action
-            can help reduce injuries and save lives.
-        </p>
-
-        <div class="steps">
-
-            <!-- STEP 1 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Emergency Kit">
-
-                <div class="step-text">
-                    <h3>1. Prepare an Emergency Kit</h3>
-                    <p>
-                        Keep essential supplies such as water, food, flashlight,
-                        batteries, medicines, and first aid kits ready.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 2 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Drop Cover Hold">
-
-                <div class="step-text">
-                    <h3>2. Drop, Cover, and Hold</h3>
-                    <p>
-                        During an earthquake, get under a sturdy table,
-                        protect your head, and hold on until the shaking stops.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 3 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/535/535137.png" alt="Evacuation">
-
-                <div class="step-text">
-                    <h3>3. Follow Evacuation Routes</h3>
-                    <p>
-                        Move calmly to designated evacuation areas after the shaking
-                        stops and avoid crowded exits.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 4 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Hazards">
-
-                <div class="step-text">
-                    <h3>4. Stay Away from Hazards</h3>
-                    <p>
-                        Avoid damaged buildings, glass windows, electrical wires,
-                        and unstable structures after an earthquake.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 5 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Safety Check">
-
-                <div class="step-text">
-                    <h3>5. Check for Injuries and Damage</h3>
-                    <p>
-                        Help injured individuals if safe to do so and report
-                        dangerous conditions immediately.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-    <!-- ELECTRICAL -->
-   <!-- ELECTRICAL -->
-<div id="route4" class="route-box" style="display:none;">
-
-    <!-- Banner -->
-    <img 
-        class="banner"
-        src="https://www.meteorelectrical.com/media/wysiwyg/Electrical_hazards.jpg"
-        alt="Electrical Safety"
-    >
-
-    <div class="content">
-
-        <h2>Electrical Safety Awareness</h2>
-
-        <p class="intro">
-            Electrical hazards can cause serious injuries, fires, and equipment damage.
-            Following proper safety procedures helps maintain a safe workplace.
-        </p>
-
-        <div class="steps">
-
-            <!-- STEP 1 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png" alt="Inspection">
-
-                <div class="step-text">
-                    <h3>1. Inspect Equipment Regularly</h3>
-                    <p>
-                        Check electrical cords, plugs, and tools for damage before use
-                        to prevent accidents and short circuits.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 2 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Wet Hands">
-
-                <div class="step-text">
-                    <h3>2. Avoid Wet Conditions</h3>
-                    <p>
-                        Never handle electrical devices with wet hands or near water
-                        to reduce the risk of electric shock.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 3 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Overload">
-
-                <div class="step-text">
-                    <h3>3. Prevent Overloading</h3>
-                    <p>
-                        Avoid plugging too many devices into one outlet or extension
-                        cord to prevent overheating and fires.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 4 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png" alt="Protective Gear">
-
-                <div class="step-text">
-                    <h3>4. Use Proper Protective Equipment</h3>
-                    <p>
-                        Wear insulated gloves and safety gear when working near
-                        electrical systems or machinery.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 5 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/2784/2784464.png" alt="Emergency">
-
-                <div class="step-text">
-                    <h3>5. Know Emergency Procedures</h3>
-                    <p>
-                        Learn how to shut off power sources and respond quickly
-                        during electrical emergencies.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-     <!-- TSUNAMI -->
-<div id="route5" class="route-box" style="display:none;">
-
-    <!-- Banner -->
-    <img 
-        class="banner"
-        src="https://tse2.mm.bing.net/th/id/OIP.jJ7fU4UODfwye3FLOL6uWAHaE3?rs=1&pid=ImgDetMain&o=7&rm=3"
-        alt="Tsunami Safety"
-    >
-
-    <div class="content">
-
-        <h2>Tsunami Safety & Preparedness</h2>
-
-        <p class="intro">
-            A tsunami is a series of powerful waves usually caused by underwater 
-            earthquakes. These waves can travel very fast and become dangerous 
-            when reaching coastal areas.
-        </p>
-        <div class="steps">
-
-            <!-- STEP 1 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="Earthquake">
-
-                <div class="step-text">
-                    <h3>1. Know the Warning Signs</h3>
-                    <p>
-                        Signs include strong earthquakes, sudden sea level changes,
-                        and roaring sounds coming from the ocean.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 2 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Higher Ground">
-
-                <div class="step-text">
-                    <h3>2. Move to Higher Ground</h3>
-                    <p>
-                        Immediately leave low-lying coastal areas after a strong
-                        earthquake and proceed to safer elevated places.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 3 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Danger">
-
-                <div class="step-text">
-                    <h3>3. Stay Away from the Shoreline</h3>
-                    <p>
-                        Never go near the beach to watch the tsunami because
-                        the waves can travel faster than expected.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 4 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/3079/3079177.png" alt="Sea Level">
-
-                <div class="step-text">
-                    <h3>4. Watch for Unusual Sea Conditions</h3>
-                    <p>
-                        Rapid lowering of sea water may indicate an incoming tsunami.
-                        Move to higher areas immediately.
-                    </p>
-                </div>
-            </div>
-
-            <!-- STEP 5 -->
-            <div class="step">
-                <img src="https://cdn-icons-png.flaticon.com/512/2967/2967350.png" alt="Preparedness">
-
-                <div class="step-text">
-                    <h3>5. Stay Prepared and Informed</h3>
-                    <p>
-                        Since the Philippines is located along the Pacific Ring of Fire,
-                        awareness and quick action are important for safety.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- FINAL REMINDER -->
-        <div class="step" style="margin-top:30px; border-left:6px solid #ff9800;">
-            
-            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Reminder">
-
-            <div class="step-text">
-                <h3>Final Reminder</h3>
-
-                <p>
-                    Earthquakes and tsunamis are common natural hazards in the Philippines.
-                    Through awareness, preparedness, and fast action, we can protect
-                    ourselves and others.
-                </p>
-
-                <p>
-                    <strong>Stay aware. Stay safe. Stay prepared.</strong>
-                </p>
-            </div>
-        </div>
-
-    </div>
 </div>
 
 </section>
-            
-            <section id="blank-section" class="content-section" style="display: none;">
-                <h2>Description Section</h2>
-                <img src="https://via.placeholder.com/400x200.png?text=Description" alt="Description Section">
-                <p>This section can be used for additional descriptions...</p>
-            </section>
-        </main>
+    </main>
+
+</div>
+
+<!-- =========================================
+FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <p>
+            © 2026 PNOCS Safety Monitoring System
+        </p>
+
+        <p>
+            Safety • Preparedness • Protection
+        </p>
+
     </div>
 
-    <footer>
-    <div class="footer-content">
-      
-    
-    </div>
 </footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
