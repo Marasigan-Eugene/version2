@@ -1,206 +1,162 @@
-// =========================
-// SHOW SECTION
-// =========================
-function showSection(sectionId) {
+// =========================================
+// SAFETY SYSTEM SCRIPT (FINAL CLEAN VERSION)
+// =========================================
 
-    // Hide all sections
-    const sections = document.querySelectorAll('.content-section');
+document.addEventListener("DOMContentLoaded", () => {
 
-    sections.forEach(section => {
-        section.style.display = 'none';
-    });
-
-    // Show selected section
-    const selectedSection = document.getElementById(sectionId);
-
-    if (selectedSection) {
-        selectedSection.style.display = 'block';
-    }
-
-    // ACTIVE SIDEBAR
-    const links = document.querySelectorAll('.sidebar a');
-
-    links.forEach(link => {
-        link.classList.remove('active');
-    });
-
-    event.currentTarget.classList.add('active');
-}
-
-
-// =========================
-// SHOW ROUTE INFO
-// =========================
-function showRoute(routeId) {
-
-    const display = document.getElementById("route-display");
-
-    let content = "";
-
-    switch(routeId) {
-
-        case "earthquake":
-            content = `
-                <h3>Earthquake Safety</h3>
-                <p>
-                    Drop, Cover, and Hold. Stay away from glass and heavy objects.
-                    Evacuate after shaking stops.
-                </p>
-            `;
-            break;
-
-        case "volcano":
-            content = `
-                <h3>Volcano Safety</h3>
-                <p>
-                    Follow evacuation orders immediately.
-                    Wear masks and avoid low-lying areas.
-                </p>
-            `;
-            break;
-
-        case "landslide":
-            content = `
-                <h3>Landslide Safety</h3>
-                <p>
-                    Avoid steep slopes during heavy rain and move
-                    to higher ground if warning signs appear.
-                </p>
-            `;
-            break;
-
-        case "stormsurge":
-            content = `
-                <h3>Storm Surge Safety</h3>
-                <p>
-                    Evacuate coastal areas immediately during typhoon warnings.
-                </p>
-            `;
-            break;
-
-        case "tsunami":
-            content = `
-                <h3>Tsunami Preparedness</h3>
-                <p>
-                    After a strong earthquake, immediately move
-                    to higher ground.
-                </p>
-            `;
-            break;
-
-        case "dengue":
-            content = `
-                <h3>Dengue Prevention</h3>
-                <p>
-                    Remove stagnant water and protect yourself
-                    from mosquito bites.
-                </p>
-            `;
-            break;
-
-        case "heat":
-            content = `
-                <h3>Severe Heat Safety</h3>
-                <p>
-                    Stay hydrated and avoid direct sunlight
-                    during extreme heat.
-                </p>
-            `;
-            break;
-
-        case "5s":
-            content = `
-                <h3>5S Safety System</h3>
-                <p>
-                    Sort, Set in Order, Shine, Standardize,
-                    and Sustain workplace safety.
-                </p>
-            `;
-            break;
-
-        case "electrical":
-            content = `
-                <h3>Electrical Safety</h3>
-                <p>
-                    Avoid overloaded outlets and report
-                    damaged wiring immediately.
-                </p>
-            `;
-            break;
-
-        case "motorcycle":
-            content = `
-                <h3>Motorcycle Safety</h3>
-                <p>
-                    Always wear a helmet and follow traffic rules.
-                </p>
-            `;
-            break;
-
-        case "eid":
-            content = `
-                <h3>Eid Al Adha Safety</h3>
-                <p>
-                    Maintain cleanliness and practice safe food handling.
-                </p>
-            `;
-            break;
-
-        case "soul":
-            content = `
-                <h3>All Souls' Day Safety</h3>
-                <p>
-                    Be cautious in crowded areas and stay hydrated.
-                </p>
-            `;
-            break;
-
-        default:
-            content = `
-                <h3>Select a Topic</h3>
-                <p>Click a button to view safety information.</p>
-            `;
-    }
-
-    display.innerHTML = content;
-}
-
-
-// =========================
-// ENLARGE DISPLAY
-// =========================
-const routeDisplay = document.getElementById("route-display");
-
-routeDisplay.addEventListener("click", () => {
-    routeDisplay.classList.toggle("active");
-});
-
-
-// =========================
-// IMAGE MODAL
-// =========================
-function openModal(src){
+    // ===============================
+    // CACHE ELEMENTS
+    // ===============================
+    const sections = document.querySelectorAll(".content-section");
+    const links = document.querySelectorAll(".sidebar a");
 
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
-
-    modal.style.display = "flex";
-    modalImg.src = src;
-}
+    const routeDisplay = document.getElementById("route-display");
 
 
-// CLOSE MODAL
-function closeModal(){
-    document.getElementById("imageModal").style.display = "none";
-}
+    // ===============================
+    // SHOW SECTION
+    // ===============================
+    window.showSection = function (event, sectionId) {
+        if (event) event.preventDefault();
+
+        // hide all sections
+        sections.forEach(sec => {
+            sec.style.display = "none";
+        });
+
+        // show selected section
+        const target = document.getElementById(sectionId);
+        if (target) target.style.display = "block";
+
+        // remove active class
+        links.forEach(link => link.classList.remove("active"));
+
+        // set active link
+        if (event && event.currentTarget) {
+            event.currentTarget.classList.add("active");
+        }
+    };
 
 
-// CLOSE WHEN CLICK OUTSIDE
-window.onclick = function(event){
+    // ===============================
+    // ROUTE DATA
+    // ===============================
+    const routes = {
+        earthquake: {
+            title: "Earthquake Safety",
+            text: "Drop, Cover, and Hold. Stay away from glass and heavy objects. Evacuate after shaking stops."
+        },
+        volcano: {
+            title: "Volcano Safety",
+            text: "Follow evacuation orders immediately. Wear masks and avoid low-lying areas."
+        },
+        landslide: {
+            title: "Landslide Safety",
+            text: "Avoid steep slopes during heavy rain and evacuate immediately when warning signs appear."
+        },
+        stormsurge: {
+            title: "Storm Surge Safety",
+            text: "Evacuate coastal areas immediately during typhoon warnings and move to elevated locations."
+        },
+        tsunami: {
+            title: "Tsunami Preparedness",
+            text: "After a strong earthquake, immediately move to higher ground away from shorelines."
+        },
+        dengue: {
+            title: "Dengue Prevention",
+            text: "Remove stagnant water and protect yourself from mosquito bites."
+        },
+        heat: {
+            title: "Severe Heat Safety",
+            text: "Stay hydrated, avoid direct sunlight, and rest in cool areas when possible."
+        },
+        "5s": {
+            title: "5S Workplace Safety",
+            text: "Sort, Set in Order, Shine, Standardize, and Sustain a safe workplace."
+        },
+        electrical: {
+            title: "Electrical Safety",
+            text: "Avoid overloaded outlets and report damaged wiring immediately."
+        },
+        motorcycle: {
+            title: "Motorcycle Safety",
+            text: "Always wear helmets and follow traffic rules to reduce accidents."
+        },
+        fire: {
+            title: "Fire Safety",
+            text: "Stay calm during fire incidents. Use fire exits, avoid elevators, and call emergency responders."
+        },
+        flood: {
+            title: "Flood Safety",
+            text: "Move to higher ground immediately and avoid walking through flood waters."
+        },
+        typhoon: {
+            title: "Typhoon Preparedness",
+            text: "Prepare emergency kits, monitor weather updates, and secure important belongings."
+        },
+        pandemic: {
+            title: "Pandemic Safety",
+            text: "Practice proper hygiene, wear protective equipment, and maintain physical distancing."
+        }
+    };
 
-    const modal = document.getElementById("imageModal");
 
-    if(event.target === modal){
-        modal.style.display = "none";
+    // ===============================
+    // SHOW ROUTE
+    // ===============================
+    window.showRoute = function (routeId) {
+        if (!routeDisplay) return;
+
+        const data = routes[routeId];
+
+        routeDisplay.innerHTML = data
+            ? `<h3>${data.title}</h3><p>${data.text}</p>`
+            : `<h3>Select a Topic</h3><p>Click a button to view safety information.</p>`;
+    };
+
+
+    // ===============================
+    // IMAGE MODAL
+    // ===============================
+    window.openModal = function (src) {
+        if (!modal || !modalImg) return;
+
+        modal.style.display = "flex";
+        void modal.offsetWidth; // restart animation
+        modal.classList.add("show");
+
+        modalImg.src = src;
+    };
+
+    window.closeModal = function () {
+        if (!modal || !modalImg) return;
+
+        modal.classList.remove("show");
+
+        setTimeout(() => {
+            modal.style.display = "none";
+            modalImg.src = "";
+        }, 300);
+    };
+
+
+    // ===============================
+    // MODAL EVENTS
+    // ===============================
+    if (modal) {
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                window.closeModal();
+            }
+        });
     }
-}
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            window.closeModal();
+        }
+    });
+
+});
