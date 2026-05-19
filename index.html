@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -7,6 +8,10 @@
 
     <title>PNOCS Safety Monitoring</title>
 
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -23,7 +28,7 @@ HEADER
     <div class="logo-container">
 
         <img 
-            src="https://acpc.gov.ph/wp-content/uploads/BAGONG-PILIPINAS-LOGO-1-1-150x150.png"
+            src="https://i.pinimg.com/originals/93/b9/23/93b9233a41a10d58ebcaa7ecf580f040.png"
             alt="PNOCS Logo"
         >
 
@@ -66,23 +71,30 @@ MAIN CONTAINER
 
         <ul>
 
+            <!-- SAFETY EQUIPMENT -->
             <li>
 
-                <a href="#" onclick="showSection('safety-equipment')">
+                <a href="#" class="active" onclick="showSection(event, 'safety-equipment')">
 
-                    <img src="https://cdn-icons-png.flaticon.com/128/2767/2767747.png">
-
+                    <img 
+                     src="https://cdn-icons-png.flaticon.com/128/2767/2767747.png"
+                     alt="Safety Equipment Icon"
+                     >
+                
                     Safety Equipment
 
                 </a>
 
             </li>
 
+            <!-- EVACUATION -->
             <li>
 
-                <a href="#" onclick="showSection('evacuation-plan')">
+                <a href="#" onclick="showSection(event, 'evacuation-plan')">
 
-                    <img src="https://cdn-icons-png.flaticon.com/128/18325/18325164.png">
+                   <img 
+                    src="https://cdn-icons-png.flaticon.com/128/18325/18325164.png"
+                    alt="Evacuation Icon">
 
                     Evacuation Plan
 
@@ -90,9 +102,10 @@ MAIN CONTAINER
 
             </li>
 
+            <!-- APPLIANCES -->
             <li>
 
-                <a href="#" onclick="showSection('machineries')">
+                <a href="#" onclick="showSection(event, 'machineries')">
 
                     <img src="https://cdn-icons-png.flaticon.com/128/3362/3362661.png">
 
@@ -102,21 +115,23 @@ MAIN CONTAINER
 
             </li>
 
+            <!-- PREPAREDNESS -->
             <li>
 
-                <a href="#" onclick="showSection('safety-route')">
+                <a href="#" onclick="showSection(event, 'safety-route')">
 
                     <img src="https://cdn-icons-png.flaticon.com/128/18591/18591580.png">
 
-                    Emergency Preparedness 
+                    Emergency Preparedness
 
                 </a>
 
             </li>
 
+            <!-- ANNOUNCEMENTS -->
             <li>
 
-                <a href="#" onclick="showSection('blank-section')">
+                <a href="#" onclick="showSection(event, 'blank-section')">
 
                     <img src="https://cdn-icons-png.flaticon.com/128/7739/7739187.png">
 
@@ -163,44 +178,50 @@ MAIN CONTAINER
 
                 <div class="steps">
 
-                    <!-- FIRE EXTINGUISHER -->
-                    <div class="step">
+                      <!-- FIRE EXTINGUISHER -->
+<div class="step">
 
-                        <img src="https://cdn-icons-png.flaticon.com/128/12995/12995716.png">
+    <img src="https://cdn-icons-png.flaticon.com/128/12995/12995716.png">
 
-                        <div class="step-text">
+    <div class="step-text">
 
-                            <h3>1. Fire Extinguisher</h3>
+        <h3>1. Fire Extinguisher</h3>
 
-                            <p>
-                                Used to control or extinguish small fires
-                                during emergencies.
-                            </p>
+        <p>
+            Used to control or extinguish small fires
+            during emergencies.
+        </p>
 
-                            <a 
-                                href="https://docs.google.com/spreadsheets/d/1LzupdjIfSrGdSD3Ti2CEF_oDZ_oE1JuH/edit?usp=sharing"
-                                target="_blank"
-                                class="excel-link"
-                            >
-                                📊 View Excel Data
-                            </a>
+        <!-- BUTTON LINKS -->
+        <a 
+            href="https://docs.google.com/spreadsheets/d/1LzupdjIfSrGdSD3Ti2CEF_oDZ_oE1JuH/edit?usp=sharing"
+            target="_blank"
+            class="excel-link"
+        >
+            📊 View Excel Data
+        </a>
 
-                            <a 
-                                href="https://drive.google.com/file/d/1kvkVIBTt0gIdzLsZxuA5a_Rr3f0tvnyE/view"
-                                target="_blank"
-                                class="excel-link"
-                            >
-                                🧯 Fire Extinguisher Location
-                            </a>
+        <a 
+            href="https://drive.google.com/file/d/1kvkVIBTt0gIdzLsZxuA5a_Rr3f0tvnyE/view"
+            target="_blank"
+            class="excel-link"
+        >
+            🧯 Fire Extinguisher Location
+        </a>
 
-                        </div>
+        
 
-                    </div>
+    </div>
+
+</div>
 
                     <!-- EMERGENCY LIGHT -->
                     <div class="step">
 
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7UNQVbnXCQjnBfcISxxMAUIkrZy-Uea_c5w&s" alt="Emergency Light">
+                        <img 
+                        src="https://cdn-icons-png.flaticon.com/128/2533/2533190.png"
+                        alt="Emergency Light">
+
 
                         <div class="step-text">
 
@@ -215,10 +236,10 @@ MAIN CONTAINER
 
                     </div>
 
-                    <!-- FIRST AID KIT -->
+                    <!-- FIRST AID -->
                     <div class="step">
 
-                        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt="First Aid Kit">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png">
 
                         <div class="step-text">
 
@@ -233,57 +254,63 @@ MAIN CONTAINER
 
                     </div>
 
-                    <!-- SAFETY HELMET -->
+                 <!-- Smoke Alarm -->
                     <div class="step">
 
-                        <img src="https://png.pngtree.com/png-vector/20250416/ourmid/pngtree-bright-yellow-construction-safety-helmet-for-industrial-use-png-image_16017625.png" alt="Safety Helmet">
+                         <img src="https://cdn-icons-png.flaticon.com/128/4839/4839144.png" alt="Smoke Alarm">
 
-                        <div class="step-text">
+                           <div class="step-text">
 
-                            <h3>4. Safety Helmet</h3>
+                            <h3>3. Smoke Alarm</h3>
 
-                            <p>
-                                Protects the head from impacts, falling objects,
-                                and dangerous workplace hazards.
-                            </p>
+                        <p>
+                              Detects smoke and alerts occupants early to prevent fire-related emergencies.
+                         </p>
 
-                        </div>
+                         </div>
 
                     </div>
 
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =========================================
-        EVACUATION PLAN
-        ========================================= -->
-
-        <section id="evacuation-plan" class="content-section" style="display:none;">
-
-<img 
-    class="banner"
-   src="https://i.ibb.co/YT0VnBw2/669408824-2277084272824012-8232874121301597550-n-1.png"
-/>
-
-            <div class="content">
-
-                <h2>Evacuation Plan</h2>
-
-                <div class="transparent-box">
-
-                    <p class="intro">
-                        Follow the designated evacuation routes during emergencies
-                        to ensure safety and orderly movement.
-                    </p>
+                    
 
                 </div>
 
             </div>
 
         </section>
+
+       <!-- =========================================
+EVACUATION PLAN
+========================================= -->
+
+<section id="evacuation-plan" class="content-section" style="display:none;">
+
+    <div class="evacuation-image-container">
+
+        <img 
+            class="evacuation-image"
+            src="https://i.ibb.co/YT0VnBw2/669408824-2277084272824012-8232874121301597550-n-1.png"
+            alt="Evacuation Plan"
+        >
+
+    </div>
+
+    <div class="content">
+
+        <h2>Evacuation Plan</h2>
+
+        <div class="transparent-box">
+
+            <p class="intro">
+                Follow the designated evacuation routes during emergencies
+                to ensure safety and orderly movement.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
         <!-- =========================================
         APPLIANCES
@@ -312,10 +339,10 @@ MAIN CONTAINER
 
                 <div class="steps">
 
-                    <!-- AIR CONDITIONER -->
+                    <!-- AIRCON -->
                     <div class="step">
 
-                        <img src="https://cdn-icons-png.flaticon.com/512/1530/1530481.png" alt="Air Conditioner">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1530/1530481.png">
 
                         <div class="step-text">
 
@@ -323,20 +350,17 @@ MAIN CONTAINER
 
                             <p>
                                 Air conditioning systems help maintain comfortable
-                                room temperatures and proper ventilation inside offices
-                                and facilities.
+                                room temperatures and proper ventilation.
                             </p>
 
                             <p>
                                 <strong>Maintenance:</strong>
-                                Clean filters regularly, inspect electrical connections,
-                                and schedule periodic servicing to maintain efficiency.
+                                Clean filters regularly and inspect wiring.
                             </p>
 
                         </div>
 
                     </div>
-
 
 
                 </div>
@@ -346,152 +370,176 @@ MAIN CONTAINER
         </section>
 
         <!-- =========================================
-        SAFETY ROUTE
+        EMERGENCY PREPAREDNESS
         ========================================= -->
 
-       <!-- =========================================
-SAFETY ROUTE
-========================================= -->
+        <section id="safety-route" class="content-section" style="display:none;">
 
-<section id="safety-route" class="content-section" style="display:none;">
+            <div class="content">
 
-    <div class="content">
+                <h2>Emergency Preparedness</h2>
 
-        <h2>Emergency Preparedness</h2>
+                <div class="route-buttons">
 
-        <div class="route-buttons">
+                    <!-- NATURAL DISASTERS -->
+                    <button class="route-btn" onclick="showRoute('earthquake')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3242/3242697.png">
+                        Earthquake
+                    </button>
 
-            <!-- Natural Disasters -->
-            <button class="route-btn" onclick="showRoute('earthquake')">
-                <img src="https://cdn-icons-png.flaticon.com/128/3242/3242697.png" alt="">
-                Earthquake
-            </button>
+                    <button class="route-btn" onclick="showRoute('volcano')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/472/472743.png">
+                        Volcano
+                    </button>
 
-            <button class="route-btn" onclick="showRoute('volcano')">
-                <img src="https://cdn-icons-png.flaticon.com/128/472/472743.png" alt="">
-                Volcano
-            </button>
+                    <button class="route-btn" onclick="showRoute('landslide')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/5907/5907032.png">
+                        Landslide
+                    </button>
 
-            <button class="route-btn" onclick="showRoute('landslide')">
-                <img src="https://cdn-icons-png.flaticon.com/128/5907/5907032.png" alt="">
-                Landslide
-            </button>
+                    <button class="route-btn" onclick="showRoute('stormsurge')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/9755/9755320.png">
+                        Storm Surge
+                    </button>
 
-            <button class="route-btn" onclick="showRoute('stormsurge')">
-                <img src="https://cdn-icons-png.flaticon.com/128/9755/9755320.png" alt="">
-                Storm Surge
-            </button>
+                    <button class="route-btn" onclick="showRoute('tsunami')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1146/1146834.png">
+                        Tsunami
+                    </button>
 
-            <button class="route-btn" onclick="showRoute('tsunami')">
-                <img src="https://cdn-icons-png.flaticon.com/128/1146/1146834.png" alt="">
-                Tsunami
-            </button>
+                    <!-- HEALTH -->
+                    <button class="route-btn" onclick="showRoute('dengue')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/16779/16779709.png">
+                        Dengue
+                    </button>
 
-            <!-- Health & Environmental Safety -->
-            <button class="route-btn" onclick="showRoute('dengue')">
-                <img src="https://cdn-icons-png.flaticon.com/128/16779/16779709.png" alt="">
-                Dengue
-            </button>
+                    <button class="route-btn" onclick="showRoute('heat')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/7110/7110207.png">
+                        Severe Heat
+                    </button>
 
-            <button class="route-btn" onclick="showRoute('heat')">
-                <img src="https://cdn-icons-png.flaticon.com/128/7110/7110207.png" alt="">
-                Severe Heat
-            </button>
+                    <button class="route-btn" onclick="showRoute('5s')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/9584/9584483.png">
+                         5s
+                    </button>
 
-            <button class="route-btn" onclick="showRoute('5s')">
-                <img src="https://cdn-icons-png.flaticon.com/128/9584/9584507.png" alt="">
-                5S
-            </button>
+                    <!-- SAFETY -->
+                    <button class="route-btn" onclick="showRoute('electrical')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/616/616494.png">
+                        Electrical
+                    </button>
 
-            <!-- Electrical & Transportation Safety -->
-            <button class="route-btn" onclick="showRoute('electrical')">
-                <img src="https://cdn-icons-png.flaticon.com/128/616/616494.png" alt="">
-                Electrical
-            </button>
+                    <button class="route-btn" onclick="showRoute('motorcycle')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/11432/11432322.png">
+                        Motorcycle
+                    </button>
 
-            <button class="route-btn" onclick="showRoute('motorcycle')">
-                <img src="https://cdn-icons-png.flaticon.com/128/11432/11432322.png" alt="">
-                Motorcycle
-            </button>
+                    <button class="route-btn" onclick="showRoute('fire')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/785/785116.png">
+                        Fire Safety
+                    </button>
 
-            <!-- Religious & Cultural Events -->
-            <button class="route-btn" onclick="showRoute('eid')">
-                <img src="https://cdn-icons-png.flaticon.com/128/4358/4358837.png" alt="">
-                Eid Al Adha
-            </button>
+                    <button class="route-btn" onclick="showRoute('flood')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/414/414974.png">
+                        Flood
+                    </button>
 
-            <button class="route-btn" onclick="showRoute('soul')">
-                <img src="https://cdn-icons-png.flaticon.com/128/3956/3956818.png" alt="">
-                All Souls' Day
-            </button>
+                    <button class="route-btn" onclick="showRoute('typhoon')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4834/4834559.png">
+                        Typhoon
+                    </button>
 
-        </div>
+                    <button class="route-btn" onclick="showRoute('pandemic')">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2785/2785819.png">
+                        Pandemic
+                    </button>
 
-        <!-- OUTPUT AREA -->
-        <div id="route-display" class="route-display">
-            <h3>Select a topic</h3>
-            <p>Click a button to view safety information.</p>
-        </div>
+                </div>
 
-    </div>
+                <!-- OUTPUT -->
+                <div id="route-display" class="route-display">
 
-</section>
+                    <h3>Select a topic</h3>
 
-    <!-- =========================================
-DESCRIPTION SECTION
-========================================= -->
+                    <p>
+                        Click a button to view safety information.
+                    </p>
 
-<section id="blank-section" class="content-section" style="display:none;">
+                </div>
 
-    <div class="content">
+            </div>
 
-        <h2>Safety Announcements & Updates</h2>
+        </section>
 
-       <div class="news-container">
+        <!-- =========================================
+        SAFETY ANNOUNCEMENTS
+        ========================================= -->
 
-    <!-- CARD 1 -->
-    <div class="news-card">
-        <img 
-            src="https://i.ibb.co/XkJ54Y1X/901a052bab0b41ee9ca8807ec9c046e7.jpg"
-            alt="Safety News"
-            class="card-image"
-            onclick="openModal(this.src)"
-        >
-    </div>
+        <section id="blank-section" class="content-section" style="display:none;">
 
-    <!-- CARD 2 -->
-    <div class="news-card">
-        <img 
-            src="https://i.ibb.co/svmjqg1N/6559846258474f728458974791015923.jpg"
-            alt="Safety News"
-            class="card-image"
-            onclick="openModal(this.src)"
-        >
-    </div>
+            <div class="content">
 
-    <!-- CARD 3 -->
-    <div class="news-card">
-        <img 
-            src="https://i.ibb.co/YFFMGcQ9/3.jpg"
-            alt="Safety News"
-            class="card-image"
-            onclick="openModal(this.src)"
-        >
-    </div>
+                <h2>Safety Announcements & Updates</h2>
 
-    <!-- CARD 4 -->
-    <div class="news-card">
-        <img 
-            src="https://i.ibb.co/Kj6R7yQC/2ef687793fbd4140920e0acb9683d75f.jpg"
-            alt="Safety News"
-            class="card-image"
-            onclick="openModal(this.src)"
-        >
-    </div>
+                <div class="news-container">
+
+                    <div class="news-card">
+
+                        <img 
+                            src="https://i.ibb.co/XkJ54Y1X/901a052bab0b41ee9ca8807ec9c046e7.jpg"
+                            class="card-image"
+                            onclick="openModal(this.src)"
+                        >
+
+                    </div>
+
+                    <div class="news-card">
+
+                        <img 
+                            src="https://i.ibb.co/svmjqg1N/6559846258474f728458974791015923.jpg"
+                            class="card-image"
+                            onclick="openModal(this.src)"
+                        >
+
+                    </div>
+
+
+                     <div class="news-card">
+
+                        <img 
+                            src="https://i.ibb.co/fGKbD05X/21d666a3ef464706bab09eb9b9c9503b.jpg"
+                            class="card-image"
+                            onclick="openModal(this.src)"
+                        >
+
+                    </div>
+
+
+
+                     <div class="news-card">
+
+                        <img 
+                            src="https://i.ibb.co/84X9qNZw/2ef687793fbd4140920e0acb9683d75f.jpg"
+                            class="card-image"
+                            onclick="openModal(this.src)"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 </div>
 
-<!-- FULLSCREEN IMAGE MODAL -->
+<!-- =========================================
+IMAGE MODAL
+========================================= -->
+
 <div id="imageModal" class="modal">
 
     <span class="close-btn" onclick="closeModal()">
@@ -499,11 +547,6 @@ DESCRIPTION SECTION
     </span>
 
     <img id="modalImg" class="modal-image">
-
-</div>
-
-</section>
-    </main>
 
 </div>
 
@@ -527,7 +570,8 @@ FOOTER
 
 </footer>
 
-<script src="script.js"></script>
+<!-- JAVASCRIPT -->
+<script src="script.js" defer></script>
 
 </body>
 </html>
